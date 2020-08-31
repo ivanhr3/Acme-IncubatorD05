@@ -17,15 +17,27 @@ import acme.framework.controllers.AbstractController;
 public class EntrepreneurInvestmentRoundController extends AbstractController<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	private EntrepreneurInvestmentRoundShowService	showService;
+	private EntrepreneurInvestmentRoundShowService		showService;
 
 	@Autowired
-	private EntrepreneurInvestmentRoundListService	listService;
+	private EntrepreneurInvestmentRoundListService		listService;
+
+	@Autowired
+	private EntrepreneurInvestmentRoundCreateService	createService;
+
+	@Autowired
+	private EntrepreneurInvestmentRoundUpdateService	updateService;
+
+	@Autowired
+	private EntrepreneurInvestmentRoundDeleteService	deleteService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 }

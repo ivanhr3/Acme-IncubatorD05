@@ -20,7 +20,14 @@ public class EntrepreneurActivityShowService implements AbstractShowService<Entr
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
-		return true;
+
+		int principalId = request.getPrincipal().getActiveRoleId();
+		int activityId = request.getModel().getInteger("id");
+		Activity activity = this.repository.findOneById(activityId);
+		Entrepreneur entrepreneur = this.repository.findOneEntrepreneurById(principalId);
+
+		boolean result = activity.getInvestmentRound().getEntrepreneur().equals(entrepreneur);
+		return result;
 	}
 
 	@Override

@@ -18,10 +18,10 @@
 <acme:form readonly="true">
 <acme:form-url code="anonymous.notice.form.label.headerPicture" path="headerPicture"/>
 	<acme:form-textbox code="anonymous.notice.form.label.title" path="title"/>
-	<acme:form-textbox code="anonymous.notice.form.label.creationDate" path="creationDate"/>
-	<acme:form-textbox code="anonymous.notice.form.label.deadline" path="deadline"/>
-	<acme:form-textbox code="anonymous.notice.form.label.body" path="body"/>
-	<acme:form-textbox code="anonymous.notice.form.label.relatedNotices" path="relatedNotices"/>
+	<acme:form-moment code="anonymous.notice.form.label.creationDate" path="creationDate"/>
+	<acme:form-moment code="anonymous.notice.form.label.deadline" path="deadline"/>
+	<acme:form-textarea code="anonymous.notice.form.label.body" path="body"/>
+	<acme:form-url code="anonymous.notice.form.label.relatedNotices" path="relatedNotices"/>
 		
 	<acme:form-return code="anonymous.notice.form.button.return"/>
 </acme:form>

@@ -20,7 +20,10 @@ public class BookkepperInvestmentRoundShowService implements AbstractShowService
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
-		return true;
+
+		int principalId = request.getPrincipal().getActiveRoleId();
+		Bookkepper b = this.repository.findOneBookkepperById(principalId);
+		return b != null;
 	}
 
 	@Override

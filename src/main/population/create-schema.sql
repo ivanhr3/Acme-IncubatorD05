@@ -41,11 +41,13 @@
        `id` integer not null,
         `version` integer not null,
         `creation_date` datetime(6),
+        `justification` varchar(255),
         `offer_amount` double precision,
         `offer_currency` varchar(255),
         `statement` varchar(255),
         `status` varchar(255),
         `ticker` varchar(255),
+        `updated_status_date` datetime(6),
         `investment_round_id` integer not null,
         `investor_id` integer not null,
         primary key (`id`)
@@ -99,7 +101,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `qualification_record` varchar(255),
-        `sector` tinyblob,
+        `sector` varchar(255),
         `skills_record` varchar(255),
         `startup_name` varchar(255),
         primary key (`id`)
@@ -148,9 +150,11 @@
         `creation_date` datetime(6),
         `description` varchar(255),
         `kind_of_round` varchar(255),
+        `status` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
         `entrepreneur_id` integer not null,
+        `forum_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -160,7 +164,7 @@
         `user_account_id` integer,
         `firm_name` varchar(255),
         `profile` varchar(255),
-        `sector` tinyblob,
+        `sector` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -387,6 +391,11 @@ create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
        add constraint `FKkj1l8c2ftn9c65y061me6t37j` 
        foreign key (`entrepreneur_id`) 
        references `entrepreneur` (`id`);
+
+    alter table `investment_round` 
+       add constraint `FKidufrenbfe15mdi0cx80oci4v` 
+       foreign key (`forum_id`) 
+       references `forum` (`id`);
 
     alter table `investor` 
        add constraint FK_dcek5rr514s3rww0yy57vvnpq 

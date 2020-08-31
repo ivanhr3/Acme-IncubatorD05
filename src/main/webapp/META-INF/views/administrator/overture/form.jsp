@@ -22,8 +22,8 @@
 	</jstl:if>
 	<acme:form-moment code="administrator.overture.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.overture.form.label.paragraph" path="paragraph"/>
-	<acme:form-textbox code="administrator.overture.form.label.minimumMoney" path="minimumMoney"/>
-	<acme:form-textbox code="administrator.overture.form.label.maximumMoney" path="maximumMoney"/>
+	<acme:form-money code="administrator.overture.form.label.minimumMoney" path="minimumMoney"/>
+	<acme:form-money code="administrator.overture.form.label.maximumMoney" path="maximumMoney"/>
 	<acme:form-textbox code="administrator.overture.form.label.email" path="email"/>
 	
 	<acme:form-submit test="${ command == 'show' }" code="administrator.overture.form.button.update" action="/administrator/overture/update"/>

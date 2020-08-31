@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -24,6 +25,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.entities.accountingRecords.AccountingRecord;
 import acme.entities.activities.Activity;
 import acme.entities.applications.Application;
+import acme.entities.forums.Forum;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -50,6 +52,10 @@ public class InvestmentRound extends DomainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date							creationDate;
 
+	@NotBlank
+	@Pattern(regexp = "DRAFT|PUBLISHED")
+	private String							status;
+
 	@NotNull
 	@Pattern(regexp = "SEED|ANGEL|SERIES-A|SERIES-B|SERIES-C|BRIDGE")
 	private String							kindOfRound;
@@ -67,28 +73,27 @@ public class InvestmentRound extends DomainEntity {
 	@URL
 	private String							additionalInfo;
 
-	@NotNull
 	@OneToMany(mappedBy = "investmentRound")
 	@LazyCollection(LazyCollectionOption.FALSE)
 	private Collection<@Valid Activity>		workProgramme;
 
-	@NotNull
-	@Valid
 	@ManyToOne(optional = false)
 	private Entrepreneur					entrepreneur;
 
-	@NotNull
 	@OneToMany(mappedBy = "investmentRound")
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private Collection<@Valid Application>	application;
 
-	@NotNull
-	@Valid
 	@OneToMany(mappedBy = "investmentRound")
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private Collection<AccountingRecord>	accountingRecord;
+
+	@OneToOne(optional = true)
+	private Forum							forum;
 
 
 	@Transient
-	private boolean isBudgetCorrect() {
+	public boolean isBudgetCorrect() {
 		Double res = 0.0;
 		Boolean ok = false;
 
@@ -96,7 +101,7 @@ public class InvestmentRound extends DomainEntity {
 			res = res + a.getBudget().getAmount();
 
 		}
-		if (res == this.amount.getAmount()) {
+		if (res.equals(this.amount.getAmount())) {
 			ok = true;
 		}
 		return ok;

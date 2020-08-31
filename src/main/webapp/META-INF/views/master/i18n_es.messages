@@ -77,6 +77,9 @@ master.menu.entrepreneur = Empresario/a
 master.menu.entrepreneur.favourite-link = Enlace favorito
 master.menu.entrepreneur.listmyinvestmentrounds = Mis rondas de inversión
 master.menu.entrepreneur.listmyapplications = Aplicaciones a mis rondas de inversión
+master.menu.entrepreneur.investmentround.create = Crear una ronda de inversión
+master.menu.entrepreneur.listmyapplicationsbyticker = Aplicaciones a mis rondas de inversión agrupadas por ticker
+master.menu.entrepreneur.listmyapplicationsbydate = Aplicaciones a mis rondas de inversión agrupadas por fecha de creación
 
 # master.menu.bookkepper ########################################################
 
@@ -90,6 +93,7 @@ master.menu.bookkepper.investmentround.listnonrec = Rondas de inversión sin mis
 master.menu.investor = Inversor/a
 master.menu.investor.favourite-link = Enlace favorito
 master.menu.investor.listmyapplications = Mis aplicaciones a rondas de inversión
+master.menu.investor.createapplications = Aplicar a una ronda de inversión
 
 
 # master.menu.provider ########################################################
@@ -110,6 +114,10 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-entrepreneur = Hazte empresario
+master.menu.user-account.entrepreneur = Datos de empresario
+master.menu.user-account.become-investor = Hazte inversor
+master.menu.user-account.investor = Datos de inversor
 
 ﻿# master.footer ###############################################################
 

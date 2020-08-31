@@ -10,4 +10,9 @@ administrator.notice.form.label.body = Cuerpo
 administrator.notice.form.label.relatedNotices = Noticias relacionadas
 administrator.notice.form.label.confirm = Confirmar creación
 
+administrator.notice.form.button.submit = Crear
 administrator.notice.form.button.return = Volver
+
+acme.validation.deadline = Debe ser al menos un mes en futuro.
+acme.validation.relatedNotices = No se ha escrito bien la URL.
+acme.validation.confirm = Debes confirmar la creación.

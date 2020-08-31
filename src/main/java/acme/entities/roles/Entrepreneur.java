@@ -2,11 +2,8 @@
 package acme.entities.roles;
 
 import javax.persistence.Entity;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
-import acme.entities.sectors.Sector;
 import acme.framework.entities.UserRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,9 +21,8 @@ public class Entrepreneur extends UserRole {
 	@NotBlank
 	private String				startupName;
 
-	@NotNull
-	@Valid
-	private Sector				sector;
+	@NotBlank
+	private String				sector;
 
 	@NotBlank
 	private String				qualificationRecord;

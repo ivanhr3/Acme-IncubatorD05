@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.messages.Message;
+import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -20,7 +22,20 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 	@Override
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
-		return true;
+
+		Boolean result = false;
+		Integer idPrincipal = request.getPrincipal().getAccountId();
+		Integer idMessage = request.getModel().getInteger("id");
+		Message message = this.repository.findMessageById(idMessage);
+
+		if (request.getPrincipal().hasRole(Entrepreneur.class)) {
+			Entrepreneur entrepreneur = this.repository.findOneEntrepreneurByUserId(idPrincipal);
+			result = message.getForum().getInvestmentRound().getEntrepreneur().equals(entrepreneur);
+		} else {
+			Investor investor = this.repository.findOneInvestorByUserId(idPrincipal);
+			result = message.getForum().getInvestor().equals(investor);
+		}
+		return result;
 	}
 
 	@Override
