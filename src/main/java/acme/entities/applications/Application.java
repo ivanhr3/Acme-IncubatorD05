@@ -41,6 +41,10 @@ public class Application extends DomainEntity {
 	@Past
 	private Date				creationDate;
 
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				updatedStatusDate;
+
 	@NotBlank
 	private String				statement;
 
@@ -51,6 +55,8 @@ public class Application extends DomainEntity {
 	@NotBlank
 	@Pattern(regexp = "ACCEPTED|REJECTED|PENDING")
 	private String				status;
+
+	private String				justification;
 
 	@NotNull
 	@Valid

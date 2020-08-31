@@ -22,8 +22,8 @@
 	</jstl:if>
 	<acme:form-moment code="administrator.inquire.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.inquire.form.label.paragraph" path="paragraph"/>
-	<acme:form-textbox code="administrator.inquire.form.label.minimumMoney" path="minimumMoney"/>
-	<acme:form-textbox code="administrator.inquire.form.label.maximumMoney" path="maximumMoney"/>
+	<acme:form-money code="administrator.inquire.form.label.minimumMoney" path="minimumMoney"/>
+	<acme:form-money code="administrator.inquire.form.label.maximumMoney" path="maximumMoney"/>
 	<acme:form-textbox code="administrator.inquire.form.label.email" path="email"/>
 	
 	<acme:form-submit test="${ command == 'show' }" code="administrator.inquire.form.button.update" action="/administrator/inquire/update"/>

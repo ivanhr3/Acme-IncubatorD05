@@ -27,5 +27,6 @@
 	
 	<acme:form-submit method="get" code="authenticated.investmentround.form.button.workProgramme" action="/authenticated/activity/list?id=${id}"/>
 	<acme:form-submit method="get" code="authenticated.investmentround.form.button.accountingRecord" action="/authenticated/accounting-record/list?id=${id}"/>
+	<acme:form-submit method="get" test="${status == 'PUBLISHED' && isInvestor && !alreadyApplied }" code="authenticated.investentround.form.button.application" action="/investor/application/create?id=${id}&ticker=${ticker}"/>
 	<acme:form-return code="authenticated.investmentround.form.button.return"/>
 </acme:form>

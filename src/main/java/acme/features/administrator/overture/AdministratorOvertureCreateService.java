@@ -50,8 +50,9 @@ public class AdministratorOvertureCreateService implements AbstractCreateService
 	@Override
 	public Overture instantiate(final Request<Overture> request) {
 		assert request != null;
-
+		Date creationDate = new Date(System.currentTimeMillis() - 1);
 		Overture result = new Overture();
+		result.setCreationDate(creationDate);
 		return result;
 	}
 

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
+import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -23,7 +25,20 @@ public class AuthenticatedForumShowService implements AbstractShowService<Authen
 	@Override
 	public boolean authorise(final Request<Forum> request) {
 		assert request != null;
-		return true;
+
+		Boolean result = false;
+		Integer idPrincipal = request.getPrincipal().getAccountId();
+		Integer idForum = request.getModel().getInteger("id");
+		Forum forum = this.repository.findForumById(idForum);
+
+		if (request.getPrincipal().hasRole(Entrepreneur.class)) {
+			Entrepreneur entrepreneur = this.repository.findOneEntrepreneurByUserId(idPrincipal);
+			result = forum.getInvestmentRound().getEntrepreneur().equals(entrepreneur);
+		} else {
+			Investor investor = this.repository.findOneInvestorByUserId(idPrincipal);
+			result = forum.getInvestor().equals(investor);
+		}
+		return result;
 	}
 
 	@Override

@@ -1,11 +1,11 @@
 
 package acme.entities.toolRecords;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
@@ -28,7 +28,7 @@ public class ToolRecord extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Sector				sector;
 
 	@NotBlank
@@ -45,7 +45,6 @@ public class ToolRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
 	private Boolean				openSource; //TRUE=OPEN-SOURCE     FALSE=CLOSED-SOURCE
 
 	@Range(min = -5, max = 5)

@@ -1,11 +1,14 @@
 
 package acme.entities.sectors;
 
-import java.util.List;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import acme.entities.technologyRecords.TechnologyRecord;
 import acme.entities.toolRecords.ToolRecord;
@@ -21,15 +24,17 @@ public class Sector extends DomainEntity {
 	/**
 	 *
 	 */
-	private static final long		serialVersionUID	= 1L;
+	private static final long				serialVersionUID	= 1L;
 
 	@NotBlank
-	private String					name;
+	private String							name;
 
 	@OneToMany()
-	private List<TechnologyRecord>	technologyRecord;
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private Collection<TechnologyRecord>	technologyRecord;
 
 	@OneToMany()
-	private List<ToolRecord>		toolRecord;
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private Collection<ToolRecord>			toolRecord;
 
 }

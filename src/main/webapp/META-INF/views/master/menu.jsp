@@ -96,16 +96,21 @@
 			<acme:menu-suboption code="master.menu.entrepreneur.favourite-link" action="http://www.unity.com/es/learn"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.entrepreneur.listmyinvestmentrounds" action="/entrepreneur/investment-round/list"/>
+			<acme:menu-suboption code="master.menu.entrepreneur.investmentround.create" action="/entrepreneur/investment-round/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.entrepreneur.listmyapplications" action="/entrepreneur/application/list"/>
+			<acme:menu-suboption code="master.menu.entrepreneur.listmyapplicationsbyticker" action="/entrepreneur/application/list_ticker"/>
+			<acme:menu-suboption code="master.menu.entrepreneur.listmyapplicationsbydate" action="/entrepreneur/application/list_date"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listforums" action="/authenticated/forum/list"/>
+
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">
 			<acme:menu-suboption code="master.menu.investor.favourite-link" action="http://www.unity.com/es/learn"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.investor.listmyapplications" action="/investor/application/list"/>
+			<acme:menu-suboption code="master.menu.investor.createapplications" action="/investor/application/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listforums" action="/authenticated/forum/list"/>
 		</acme:menu-option>
@@ -125,6 +130,10 @@
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-entrepreneur" action="/authenticated/entrepreneur/create" access="!hasRole('Entrepreneur')"/>
+			<acme:menu-suboption code="master.menu.user-account.entrepreneur" action="/authenticated/entrepreneur/update" access="hasRole('Entrepreneur')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-investor" action="/authenticated/investor/create" access="!hasRole('Investor')"/>
+			<acme:menu-suboption code="master.menu.user-account.investor" action="/authenticated/investor/update" access="hasRole('Investor')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

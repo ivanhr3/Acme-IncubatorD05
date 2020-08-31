@@ -59,6 +59,10 @@
        drop 
        foreign key `FKkj1l8c2ftn9c65y061me6t37j`;
 
+    alter table `investment_round` 
+       drop 
+       foreign key `FKidufrenbfe15mdi0cx80oci4v`;
+
     alter table `investor` 
        drop 
        foreign key FK_dcek5rr514s3rww0yy57vvnpq;

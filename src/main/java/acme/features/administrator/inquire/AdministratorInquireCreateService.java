@@ -51,7 +51,9 @@ public class AdministratorInquireCreateService implements AbstractCreateService<
 	public Inquire instantiate(final Request<Inquire> request) {
 		assert request != null;
 
+		Date creationDate = new Date(System.currentTimeMillis() - 1);
 		Inquire result = new Inquire();
+		result.setCreationDate(creationDate);
 		return result;
 	}
 

@@ -22,8 +22,8 @@
 		<acme:form-moment readonly="true" code="administrator.notice.form.label.creationDate" path="creationDate"/>
 	</jstl:if>
 	<acme:form-moment code="administrator.notice.form.label.deadline" path="deadline"/>
-	<acme:form-textbox code="administrator.notice.form.label.body" path="body"/>
-	<acme:form-textbox code="administrator.notice.form.label.relatedNotices" path="relatedNotices"/>
+	<acme:form-textarea code="administrator.notice.form.label.body" path="body"/>
+	<acme:form-url code="administrator.notice.form.label.relatedNotices" path="relatedNotices"/>
 	
 	
 	<jstl:if test="${ command == 'create' }">

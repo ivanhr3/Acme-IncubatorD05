@@ -12,4 +12,5 @@ authenticated.investmentround.list.label.amount = Amount
 
 authenticated.investmentround.form.button.accountingRecord = Accounting record
 authenticated.investmentround.form.button.workProgramme = Work Programme
+authenticated.investentround.form.button.application = Apply for it
 authenticated.investmentround.form.button.return = <- Return

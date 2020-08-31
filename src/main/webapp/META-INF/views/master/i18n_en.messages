@@ -67,7 +67,7 @@ master.menu.administrator.overtures.create = Create an overture
 master.menu.administrator.technologyrecords.list = Technology records list
 master.menu.administrator.technologyrecords.create = Create a technology record
 master.menu.administrator.toolrecords.list = Tool records list
-master.menu.administrator.toolrecords.create = Create a technology record
+master.menu.administrator.toolrecords.create = Create a tool record
 master.menu.administrator.challenges.list = Challenges list
 master.menu.administrator.challenges.create = Create a challenge
 
@@ -77,6 +77,9 @@ master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.favourite-link = Favourite link
 master.menu.entrepreneur.listmyinvestmentrounds = My investment rounds
 master.menu.entrepreneur.listmyapplications = Applications to my investment rounds
+master.menu.entrepreneur.investmentround.create = Create an investment round
+master.menu.entrepreneur.listmyapplicationsbyticker = List the applications to my investment rounds grouped by ticker
+master.menu.entrepreneur.listmyapplicationsbydate = List the applications to my investment rounds grouped by creation date
 
 # master.menu.bookkepper ########################################################
 
@@ -90,6 +93,7 @@ master.menu.bookkepper.investmentround.listnonrec = My non accounting recorded i
 master.menu.investor = Investor
 master.menu.investor.favourite-link = Favourite link
 master.menu.investor.listmyapplications = My applications to investment rounds
+master.menu.investor.createapplications = Apply for an investment round
 
 # master.menu.provider ########################################################
 
@@ -109,6 +113,10 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-entrepreneur = Become an entrepreneur
+master.menu.user-account.entrepreneur = Entrepreneur data
+master.menu.user-account.become-investor = Become an investor
+master.menu.user-account.investor = Investor
 
 # master.footer ###############################################################
 

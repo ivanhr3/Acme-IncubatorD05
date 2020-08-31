@@ -389,7 +389,7 @@
 	<bean name="investorInvestor1" class="acme.entities.roles.Investor">
 		<property name="userAccount" ref="investorUserAccount1" />
 		<property name="firmName" value="ValeriaR"></property>
-		<property name="sector" ref="sector3"></property>
+		<property name="sector" value="Art"></property>
 		<property name="profile" value="Artistic investor in Acme-Incubator SL"></property>
 	</bean>
 	
@@ -420,8 +420,8 @@
 	<bean name="investorInvestor2" class="acme.entities.roles.Investor">
 		<property name="userAccount" ref="investorUserAccount2" />
 		<property name="firmName" value="Tomas De la Cueva"></property>
-		<property name="sector" ref="sector1"></property>
-		<property name="profile" value="Experttechnology investor in Acme-Incubator SL"></property>
+		<property name="sector" value="Technology"></property>
+		<property name="profile" value="Expert technology investor in Acme-Incubator SL"></property>
 	</bean>
 	
 	<bean name="investorAuthenticated2" class="acme.framework.entities.Authenticated">
@@ -451,7 +451,7 @@
 	<bean name="investorInvestor3" class="acme.entities.roles.Investor">
 		<property name="userAccount" ref="investorUserAccount3" />
 		<property name="firmName" value="Jimena O."></property>
-		<property name="sector" ref="sector3"></property>
+		<property name="sector" value="Art"></property>
 		<property name="profile" value="Artistic investor in Acme-Incubator SL since 2010"></property>
 	</bean>
 	
@@ -483,7 +483,7 @@
 	<bean name="entrepreneurEntrepreneur1" class="acme.entities.roles.Entrepreneur">
 		<property name="userAccount" ref="entrepreneurUserAccount1" />
 		<property name="startupName" value="Healthy life!"></property>
-		<property name="sector" ref="sector5"></property>
+		<property name="sector" value="Health"></property>
 		<property name="qualificationRecord" value="Art courses"></property>
 		<property name="skillsRecord" value="Nutritionism and healthy lifestyle."></property>
 	</bean>
@@ -515,7 +515,7 @@
 	<bean name="entrepreneurEntrepreneur2" class="acme.entities.roles.Entrepreneur">
 		<property name="userAccount" ref="entrepreneurUserAccount2" />
 		<property name="startupName" value="Technology inside."></property>
-		<property name="sector" ref="sector1"></property>
+		<property name="sector" value="Technology"></property>
 		<property name="qualificationRecord" value="10 years experience"></property>
 		<property name="skillsRecord" value="JAVA, C++, DJANGO, BOOTSTRAP"></property>
 	</bean>
@@ -547,7 +547,7 @@
 	<bean name="entrepreneurEntrepreneur3" class="acme.entities.roles.Entrepreneur">
 		<property name="userAccount" ref="entrepreneurUserAccount3" />
 		<property name="startupName" value="BusinessRW"></property>
-		<property name="sector" ref="sector4"></property>
+		<property name="sector" value="Business"></property>
 		<property name="qualificationRecord" value="Economy master"></property>
 		<property name="skillsRecord" value="Broker and skilled"></property>
 	</bean>
@@ -621,6 +621,7 @@
 	<bean id="application1" class="acme.entities.applications.Application">
 		<property name="ticker" value="SCI-19-000029"></property>
 		<property name="creationDate" value="2019/12/31 14:00"></property>
+		<property name="updatedStatusDate" value="2019/12/31 14:00"></property>
 		<property name="statement" value="Application statement 1 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 1,000"></property>
 		<property name="status" value="ACCEPTED"></property>
@@ -631,6 +632,7 @@
 	<bean id="application2" class="acme.entities.applications.Application">
 		<property name="ticker" value="ART-20-000030"></property>
 		<property name="creationDate" value="2020/08/01 10:00"></property>
+		<property name="updatedStatusDate" value="2020/08/01 10:00"></property>
 		<property name="statement" value="Application statement 2 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 2,500"></property>
 		<property name="status" value="PENDING"></property>
@@ -641,6 +643,7 @@
 	<bean id="application3" class="acme.entities.applications.Application">
 		<property name="ticker" value="HEA-20-000031"></property>
 		<property name="creationDate" value="2020/04/01 20:00"></property>
+		<property name="updatedStatusDate" value="2020/04/01 20:00"></property>
 		<property name="statement" value="Application statement 3 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 15,000"></property>
 		<property name="status" value="ACCEPTED"></property>
@@ -651,6 +654,7 @@
 	<bean id="application4" class="acme.entities.applications.Application">
 		<property name="ticker" value="BUS-20-000032"></property>
 		<property name="creationDate" value="2020/05/22 12:21"></property>
+		<property name="updatedStatusDate" value="2020/05/22 12:21"></property>
 		<property name="statement" value="Application statement 4 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 20,000"></property>
 		<property name="status" value="PENDING"></property>
@@ -661,6 +665,7 @@
 	<bean id="application5" class="acme.entities.applications.Application">
 		<property name="ticker" value="TEC-20-000478"></property>
 		<property name="creationDate" value="2020/01/01 01:00"></property>
+		<property name="updatedStatusDate" value="2020/05/22 12:21"></property>
 		<property name="statement" value="Application statement 5 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 4,600"></property>
 		<property name="status" value="ACCEPTED"></property>
@@ -671,6 +676,7 @@
 	<bean id="application6" class="acme.entities.applications.Application">
 		<property name="ticker" value="TEC-20-000668"></property>
 		<property name="creationDate" value="2020/08/20 10:00"></property>
+		<property name="updatedStatusDate" value="2020/08/20 10:00"></property>
 		<property name="statement" value="Application statement 6 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 6,500"></property>
 		<property name="status" value="REJECTED"></property>
@@ -681,6 +687,7 @@
 	<bean id="application7" class="acme.entities.applications.Application">
 		<property name="ticker" value="TEC-20-995511"></property>
 		<property name="creationDate" value="2020/04/01 13:30"></property>
+		<property name="updatedStatusDate" value="2020/04/01 13:30"></property>
 		<property name="statement" value="Application statement 7 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 1,750"></property>
 		<property name="status" value="ACCEPTED"></property>
@@ -691,6 +698,7 @@
 	<bean id="application8" class="acme.entities.applications.Application">
 		<property name="ticker" value="BUS-20-950000"></property>
 		<property name="creationDate" value="2020/02/24 12:00"></property>
+		<property name="updatedStatusDate" value="2020/02/24 12:00"></property>
 		<property name="statement" value="Application statement 8 for Acme Incubator SL"></property>
 		<property name="offer" value="€ 12,000"></property>
 		<property name="status" value="REJECTED"></property>
@@ -704,6 +712,7 @@
 	<bean id="investmentRound1" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="ART-19-123456"></property>
 		<property name="creationDate" value="2019/12/31 00:00"></property>
+		<property name="status" value="PUBLISHED"></property>
 		<property name="kindOfRound" value="SEED"></property>
 		<property name="title" value="Investment round #1"></property>
 		<property name="description" value="This is a huge description in order to make the space bigger. I hope you enjoyed reading this amazing description, thanks for your time."></property>
@@ -734,6 +743,7 @@
 	<bean id="investmentRound2" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="TEC-20-001122"></property>
 		<property name="creationDate" value="2020/01/01 00:00"></property>
+		<property name="status" value="PUBLISHED"></property>
 		<property name="kindOfRound" value="SERIES-A"></property>
 		<property name="title" value="Investment round #2"></property>
 		<property name="description" value="This is a huge description in order to make the space bigger. I hope you enjoyed reading this amazing description, thanks for your time."></property>
@@ -763,6 +773,7 @@
 	<bean id="investmentRound3" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="BUS-20-224488"></property>
 		<property name="creationDate" value="2020/08/10 10:00"></property>
+		<property name="status" value="PUBLISHED"></property>
 		<property name="kindOfRound" value="SERIES-C"></property>
 		<property name="title" value="Investment round #3"></property>
 		<property name="description" value="This is a huge description in order to make the space bigger. I hope you enjoyed reading this amazing description, thanks for your time."></property>
@@ -789,6 +800,7 @@
 	<bean id="investmentRound4" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="HEA-20-148600"></property>
 		<property name="creationDate" value="2020/02/04 12:00"></property>
+		<property name="status" value="PUBLISHED"></property>
 		<property name="kindOfRound" value="BRIDGE"></property>
 		<property name="title" value="Investment round #4"></property>
 		<property name="description" value="This is a huge description in order to make the space bigger. I hope you enjoyed reading this amazing description, thanks for your time."></property>
@@ -817,6 +829,7 @@
 	<bean id="investmentRound5" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="BUS-20-880154"></property>
 		<property name="creationDate" value="2020/08/21 12:00"></property>
+		<property name="status" value="DRAFT"></property>
 		<property name="kindOfRound" value="ANGEL"></property>
 		<property name="title" value="Investment round #5"></property>
 		<property name="description" value="This is a huge description in order to make the space bigger. I hope you enjoyed reading this amazing description, thanks for your time."></property>

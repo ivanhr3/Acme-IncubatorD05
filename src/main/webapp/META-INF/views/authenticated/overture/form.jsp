@@ -17,11 +17,11 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.overture.form.label.title" path="title"/>
-	<acme:form-textbox code="authenticated.overture.form.label.creationDate" path="creationDate"/>
-	<acme:form-textbox code="authenticated.overture.form.label.deadline" path="deadline"/>
+	<acme:form-moment code="authenticated.overture.form.label.creationDate" path="creationDate"/>
+	<acme:form-moment code="authenticated.overture.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="authenticated.overture.form.label.paragraph" path="paragraph"/>
-	<acme:form-textbox code="authenticated.overture.form.label.minimumMoney" path="minimumMoney"/>
-	<acme:form-textbox code="authenticated.overture.form.label.maximumMoney" path="maximumMoney"/>
+	<acme:form-money code="authenticated.overture.form.label.minimumMoney" path="minimumMoney"/>
+	<acme:form-money code="authenticated.overture.form.label.maximumMoney" path="maximumMoney"/>
 	<acme:form-textbox code="authenticated.overture.form.label.email" path="email"/>
 	
 	<acme:form-return code="authenticated.overture.form.button.return"/>

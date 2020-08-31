@@ -12,4 +12,5 @@ authenticated.investmentround.list.label.amount = Cantidad
 
 authenticated.investmentround.form.button.accountingRecord = Registro de contabilidad
 authenticated.investmentround.form.button.workProgramme = Programa de trabajo
+authenticated.investentround.form.button.application = Solicitar/Aplicar
 authenticated.investmentround.form.button.return = <- Volver
