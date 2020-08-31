@@ -725,6 +725,7 @@
 			</list>
 		</property>
 		<property name="entrepreneur" ref="entrepreneurEntrepreneur1"></property>
+		<property name="forum" ref="forum1"></property>
 		<property name="application">
 			<list>
 				<ref bean="application1"/>
@@ -756,6 +757,7 @@
 			</list>
 		</property>
 		<property name="entrepreneur" ref="entrepreneurEntrepreneur1"></property>
+		<property name="forum" ref="forum2"></property>
 		<property name="application">
 			<list>
 				<ref bean="application4"/>
